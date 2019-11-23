@@ -18,16 +18,16 @@ class QuizQuestion extends Component {
       return (
         <main>
           <section>
-            <p>{this.props.quiz_question.instruction_text}</p>
+            <h1 className='display-5 m-5'>{this.props.quiz_question.instruction_text}</h1>
           </section>
           <section className="buttons">
-            <ul>
+            <ul className='list-group'>
               {this.props.quiz_question.answer_options.map((answer_option,index) =>{
                 return <QuizQuestionButton key={index} button_text={answer_option} clickHandler={this.handleClick.bind(this)}/>
               })}
             </ul>
           </section>
-          {this.state.incorrectAnswer ? <p className='error'>Sorry, that´s not right</p> : <p></p>}
+          {this.state.incorrectAnswer ? <p className='alert alert-danger mt-4'>Sorry, that´s not right</p> : <p></p>}
         </main> 
       )       
     }

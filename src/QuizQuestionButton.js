@@ -6,7 +6,7 @@ class QuizQuestionButton extends Component {
     }
     render() {
         return (
-            <li><button onClick={this.handleClick.bind(this)}>{this.props.button_text}</button></li>
+            <li class='list-group-item m-2'><button className='btn btn-primary' onClick={this.handleClick.bind(this)}>{this.props.button_text}</button></li>
         )
     }
 }
